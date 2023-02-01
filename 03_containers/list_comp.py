@@ -18,9 +18,7 @@ print(remove_odd_mul_100(numbers))
 results = [n * 100 for n in numbers if n % 2 == 0]
 print(results)
 
-results = [
-    n * 100 if str(n).startswith("3") else n * 1000 for n in numbers if n % 2 == 0
-]
+results = [n * 100 if str(n).startswith("3") else n * 1000 for n in numbers if n % 2 == 0]
 print(results)
 
 results = [
