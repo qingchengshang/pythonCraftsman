@@ -61,9 +61,7 @@ class IntegerField:
             raise ValueError("value is not a valid integer!")
 
         if not (self.min_value <= value <= self.max_value):
-            raise ValueError(
-                f"value must between {self.min_value} and {self.max_value}!"
-            )
+            raise ValueError(f"value must between {self.min_value} and {self.max_value}!")
         return value
 
 
@@ -104,9 +102,7 @@ class IntegerField:
             raise ValueError(f"{self._name} is not a valid integer!")
 
         if not (self.min_value <= value <= self.max_value):
-            raise ValueError(
-                f"{self._name} must between {self.min_value} and {self.max_value}!"
-            )
+            raise ValueError(f"{self._name} must between {self.min_value} and {self.max_value}!")
         return value
 
 

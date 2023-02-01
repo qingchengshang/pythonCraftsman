@@ -51,13 +51,11 @@ class Person:
         return self.name
 
     def __repr__(self):
-        return (
-            "{cls_name}(name={name!r}, age={age!r}, favorite_color={color!r})".format(
-                cls_name=self.__class__.__name__,
-                name=self.name,
-                age=self.age,
-                color=self.favorite_color,
-            )
+        return "{cls_name}(name={name!r}, age={age!r}, favorite_color={color!r})".format(
+            cls_name=self.__class__.__name__,
+            name=self.name,
+            age=self.age,
+            color=self.favorite_color,
         )
 
     def __format__(self, format_spec):

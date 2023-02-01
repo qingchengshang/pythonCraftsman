@@ -43,9 +43,7 @@ def analyze_v1():
         print(f"   Performance:")
 
         # 在输出结果前，按照“性能级别”在 PagePerfLevel 里面的顺序排列，小于 100 毫秒的在最前面
-        sorted_items = sorted(
-            result.items(), key=lambda pair: list(PagePerfLevel).index(pair[0])
-        )
+        sorted_items = sorted(result.items(), key=lambda pair: list(PagePerfLevel).index(pair[0]))
         for level_name, count in sorted_items:
             print(f"     - {level_name}: {count}")
 

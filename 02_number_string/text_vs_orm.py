@@ -84,9 +84,7 @@ def fetch_users_v2(
         query = query.where(users.c.level >= min_level)
     if gender is not None:
         query = query.where(users.c.gender == gender)
-    query = query.where(users.c.has_membership == has_membership).order_by(
-        users.c[sort_field]
-    )
+    query = query.where(users.c.has_membership == has_membership).order_by(users.c[sort_field])
     return list(conn.execute(query))
 
 

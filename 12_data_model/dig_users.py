@@ -95,10 +95,7 @@ for record in find_potential_customers_v1():
 def find_potential_customers_v2():
     """找到去过普吉岛但是没去过新西兰的人，性能改进版"""
     # 首先，遍历所有新西兰访问记录，创建查找索引
-    nz_records_idx = {
-        (rec["first_name"], rec["last_name"], rec["phone_number"])
-        for rec in users_visited_nz
-    }
+    nz_records_idx = {(rec["first_name"], rec["last_name"], rec["phone_number"]) for rec in users_visited_nz}
 
     for rec in users_visited_puket:
         key = (rec["first_name"], rec["last_name"], rec["phone_number"])
@@ -143,9 +140,7 @@ class VisitRecord:
 
 def find_potential_customers_v3():
     # 转换为 VisitRecord 对象后，计算集合差值
-    return set(VisitRecord(**r) for r in users_visited_puket) - set(
-        VisitRecord(**r) for r in users_visited_nz
-    )
+    return set(VisitRecord(**r) for r in users_visited_puket) - set(VisitRecord(**r) for r in users_visited_nz)
 
 
 for record in find_potential_customers_v3():
@@ -164,9 +159,7 @@ class VisitRecordDC:
 
 
 def find_potential_customers_v4():
-    return set(VisitRecordDC(**r) for r in users_visited_puket) - set(
-        VisitRecordDC(**r) for r in users_visited_nz
-    )
+    return set(VisitRecordDC(**r) for r in users_visited_puket) - set(VisitRecordDC(**r) for r in users_visited_nz)
 
 
 print("---")

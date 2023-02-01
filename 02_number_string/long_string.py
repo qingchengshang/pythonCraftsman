@@ -12,9 +12,7 @@ logger.setLevel(logging.DEBUG)
 
 
 def main():
-    logger.info(
-        "There is something really bad happened during the process. Please contact your administrator."
-    )
+    logger.info("There is something really bad happened during the process. Please contact your administrator.")
 
 
 def main():

@@ -61,9 +61,7 @@ class HNTopPostsSpider:
                 link=link,
                 # 条目可能会没有评分
                 points=points_text[0].split()[0] if points_text else "0",
-                comments_cnt=comments_text.split()[0]
-                if comments_text.endswith("comments")
-                else "0",
+                comments_cnt=comments_text.split()[0] if comments_text.endswith("comments") else "0",
             )
             # 判断链接是否符合过滤条件
             if self._check_link_from_hosts(post.link):

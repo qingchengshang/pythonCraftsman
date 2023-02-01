@@ -52,9 +52,7 @@ def get_sorted_movies(movies, sorting_type):
     if sorting_type == "name":
         sorted_movies = sorted(movies, key=lambda movie: movie.name.lower())
     elif sorting_type == "rating":
-        sorted_movies = sorted(
-            movies, key=lambda movie: float(movie.rating), reverse=True
-        )
+        sorted_movies = sorted(movies, key=lambda movie: float(movie.rating), reverse=True)
     elif sorting_type == "year":
         sorted_movies = sorted(movies, key=lambda movie: movie.year, reverse=True)
     elif sorting_type == "random":

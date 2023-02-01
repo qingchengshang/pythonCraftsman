@@ -36,9 +36,7 @@ class PerfLevelDict(MutableMapping):
 
     def items(self):
         """按照顺序返回性能级别数据"""
-        return sorted(
-            self.data.items(), key=lambda pair: list(PagePerfLevel).index(pair[0])
-        )
+        return sorted(self.data.items(), key=lambda pair: list(PagePerfLevel).index(pair[0]))
 
     def total_requests(self):
         """返回总请求数"""
