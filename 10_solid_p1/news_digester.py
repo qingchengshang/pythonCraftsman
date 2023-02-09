@@ -73,7 +73,6 @@ class HNTopPostsSpider:
 
 
 def main():
-
     # with open('/tmp/hn_top5.txt') as fp:
     #     crawler = HNTopPostsSpider(fp)
     #     crawler.write_to_file()
@@ -86,3 +85,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# 国外网址，访问不了，先安装 pysocks 支持 socks5 代理
+# pip install pysocks -i https://pypi.tuna.tsinghua.edu.cn/simple/
