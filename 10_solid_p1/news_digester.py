@@ -73,7 +73,7 @@ class HNTopPostsSpider:
 
 
 def main():
-    # with open('/tmp/hn_top5.txt') as fp:
+    # with open('/tmp/hn_top5.txt', 'w') as fp:
     #     crawler = HNTopPostsSpider(fp)
     #     crawler.write_to_file()
 
