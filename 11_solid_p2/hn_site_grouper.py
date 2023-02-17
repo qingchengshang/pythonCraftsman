@@ -19,7 +19,8 @@ class SiteSourceGrouper:
         resp = requests.get(self.url)
         html = etree.HTML(resp.text)
         # 通过 xpath 语法筛选新闻域名标签
-        elems = html.xpath('//table[@class="itemlist"]//span[@class="sitestr"]')
+        # elems = html.xpath('//table[@class="itemlist"]//span[@class="sitestr"]')
+        elems = html.xpath('//tr[@class="athing"]//span[@class="sitestr"]')
 
         groups = Counter()
         for elem in elems:
