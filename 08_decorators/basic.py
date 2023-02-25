@@ -13,6 +13,7 @@ import time
 #
 # @timer
 # def random_sleep():
+#     """随机睡眠一小会儿"""
 #     time.sleep(random.random())
 
 
@@ -39,6 +40,7 @@ def timer(print_args=False):
 
 @timer(print_args=True)
 def random_sleep():
+    """随机睡眠一小会儿"""
     time.sleep(random.random())
 
 
