@@ -1,7 +1,7 @@
 import random
 import time
 
-# 无参数装饰器
+# 装饰器无参数
 # def timer(func):
 #     def decorated(*args, **kwargs):
 #         st = time.perf_counter()
@@ -16,7 +16,7 @@ import time
 #     time.sleep(random.random())
 
 
-# 有参数装饰器
+# 装饰器有参数
 def timer(print_args=False):
     """装饰器：打印函数耗时
 
