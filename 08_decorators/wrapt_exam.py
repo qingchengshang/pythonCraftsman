@@ -51,3 +51,12 @@ def print_random_number(num):
 # 输出 1-100 的随机整数
 # OUTPUT: 72
 print_random_number()
+
+
+class Foo:
+    @provide_number(1, 100)
+    def print_random_number(self, num):
+        print(num)
+
+
+Foo().print_random_number()
