@@ -6,8 +6,8 @@ _validators = {}
 class ValidatorMeta(type):
     """元类：将所有校验器类统一注册起来，方便后续使用"""
 
-    def __new__(cls, name, bases, attrs):
-        ret = super().__new__(cls, name, bases, attrs)
+    def __new__(mcs, name, bases, attrs):
+        ret = super().__new__(mcs, name, bases, attrs)
         _validators[attrs["name"]] = ret
         return ret
 
