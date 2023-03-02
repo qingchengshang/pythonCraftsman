@@ -65,10 +65,7 @@ class LogParser:
         )
 
 
-import re
-
-
-class Top10CommentsAnalyzer(UniqueVisitorAnalyzer):
+class Top10CommentsAnalyzer:
     """获取某日点赞量最高的 10 条评论"""
 
     limit = 10

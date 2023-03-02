@@ -55,9 +55,6 @@ class UniqueVisitorAnalyzer:
         )
 
 
-import re
-
-
 class Top10CommentsAnalyzer(UniqueVisitorAnalyzer):
     """获取某日点赞量最高的 10 条评论
 
