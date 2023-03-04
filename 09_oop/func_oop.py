@@ -41,7 +41,7 @@ class AppConfig:
         ...
 
 
-# 下一步，为了给其它模块提供好用的API，我们需要将单例对象_config的公有方法绑定到config模块上：
+# 下一步，为了给其它模块提供好用的API，我们需要将单例对象 _config 的公有方法绑定到 config 模块上：
 # file: project/config.py
 _config = AppConfig()
 get_database_conf = _config.get_database
