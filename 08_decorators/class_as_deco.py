@@ -8,7 +8,7 @@ from functools import update_wrapper
 # from typing import Optional
 #
 #
-# 用类来实现装饰器（函数替换）
+# 用类实现装饰器（函数替换）
 # class timer:
 #     """装饰器：打印函数耗时
 #
@@ -40,7 +40,7 @@ from functools import update_wrapper
 #     random_sleep()
 
 
-# 用类来实现装饰器（示例替换）
+# 用类实现装饰器（实例替换）
 class DelayedStart:
     """在执行被装饰函数前，等待 1 秒钟"""
 
