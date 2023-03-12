@@ -23,8 +23,8 @@ class Fun:
     """
 
     def __init__(self):
-        self.name = "Liu"
-        self.age = 12
+        self.name = "Yuan"
+        self.age = 19
         self.male = True
         print(self.__dict__)
 
