@@ -21,8 +21,8 @@ class AppConfig:
 
 
 """
-# 预绑定方法模式 (prebound method pattern) 是一种将对象方法绑定为函数的模式。要实现该模式，只需要一个单例对象----模块(module)
-# 当你在 python 中执行 import 语句导入模块时，无论 import 执行了多少次，每个被导入的模块在内存中只会存在一份(保存在sys.modules中)。
+# 预绑定方法模式(prebound method pattern): 将对象方法绑定为函数。要实现该模式，只需要一个单例对象----模块(module)
+# 当你在 python 中执行 import 语句导入模块时，无论 import 执行了多少次，每个被导入的模块在内存中只会存在一份(保存在sys.modules中)
 # 因此要实现单例模式，只需在模块里创建一个全局对象即可：
 """
 class AppConfig:
@@ -41,7 +41,7 @@ class AppConfig:
         ...
 
 
-# 下一步，为了给其它模块提供好用的API，我们需要将单例对象 _config 的公有方法绑定到 config 模块上：
+# 下一步，为了给其它模块提供好用的API，需要将单例对象 _config 的公有方法绑定到 config 模块上：
 # file: project/config.py
 _config = AppConfig()
 get_database_conf = _config.get_database
