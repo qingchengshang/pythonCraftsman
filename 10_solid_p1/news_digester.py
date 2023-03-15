@@ -77,8 +77,8 @@ def main():
     #     crawler = HNTopPostsSpider(fp)
     #     crawler.write_to_file()
 
-    # 因为 HNTopPostsSpider 接收任何 file-like 的对象，所以我们可以把 sys.stdout 传进去
-    # 实现往控制台标准输出打印的功能
+    # 因为 HNTopPostsSpider 接收任何 file-like 的对象，可以把 sys.stdout 传进去
+    # 往控制台标准输出打印
     crawler = HNTopPostsSpider(sys.stdout)
     crawler.write_to_file()
 
